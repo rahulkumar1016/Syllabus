@@ -1,0 +1,65 @@
+/* General Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f8fc;
+  color: #333;
+}
+
+/* Main Heading */
+.main-heading {
+  background-color: #004080;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem 1rem;
+  font-size: 2.5rem;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #002b5c;
+  padding: 0.7rem 0;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.navbar a:hover {
+  background-color: #004080;
+}
+
+/* About Section */
+.about-section {
+  padding: 4rem 10%;
+  background-color: #fff;
+}
+
+.about-section h2 {
+  text-align: center;
+  color: #800000;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.about-section p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}

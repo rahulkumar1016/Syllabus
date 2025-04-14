@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Patliputra University</title>
+  <style>
+    :root {
+      --bg: #e3edf7;
+      --text: #1e1e1e;
+      --primary: #2c3e50;
+      --accent: #e67e22;
+      --card-bg: #ffffff;
+    }
+
+    body.dark-mode {
+      --bg: #121212;
+      --text: #f9f9f9;
+      --primary: #1abc9c;
+      --accent: #f39c12;
+      --card-bg: #1e1e1e;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    /* Top Navbar */
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: var(--primary);
+      padding: 12px 30px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand img {
+      height: 40px;
+    }
+
+    .brand-title {
+      font-size: 18px;
+      color: white;
+      font-weight: 600;
+    }
+
+    .navbar-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .navbar-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 16px;
+      padding: 6px 10px;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+
+    .navbar-links a:hover {
+      background-color: var(--accent);
+    }
+
+    .dark-toggle {
+      background: none;
+      color: var(--primary);
+      border: none;
+      padding: 6px 14px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .dark-toggle:hover {
+      background-color: var(--accent);
+      color: white;
+    }
+
+    /* Main Content */
+    .main-content {
+      padding: 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .section-card {
+      background-color: var(--card-bg);
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .section-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .section-card h2 {
+      margin-top: 0;
+      color: var(--accent);
+      font-size: 24px;
+    }
+
+    .section-card p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin: 15px 0 25px;
+    }
+
+    .btn {
+  background-color: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  display: block;
+  margin: 0 auto; /* centers the button horizontally */
+}
+
+
+    .btn:hover {
+      background-color: var(--accent);
+    }
+
+    @media (max-width: 768px) {
+      .topbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .navbar-links {
+        width: 100%;
+        justify-content: flex-start;
+        gap: 15px;
+        flex-wrap: wrap;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <div class="topbar">
+    <div class="brand">
+      <img src="/Images/ppu-logo.png" alt="PPU Logo">
+      <div class="brand-title">Patliputra University Syllabus</div>
+    </div>
+    <div class="navbar-links">
+      <a href="home.html">Home</a>
+      <a href="#contact">Contact</a>
+      <button class="dark-toggle" onclick="toggleDarkMode()">🌙</button>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="section-card" id="regular-courses">
+      <h2>Regular Courses</h2>
+      <p>Explore our full-time academic programs designed to provide in-depth knowledge in various disciplines.</p>
+      <button class="btn" onclick="regularcourses()">Discover Courses</button>
+    </div>
+
+    <div class="section-card" id="vocational-courses">
+      <h2>Vocational Courses</h2>
+      <p>Browse vocational training programs aimed at skill development and professional growth.</p>
+      <button class="btn" onclick="nextPage()">Discover Courses</button>
+    </div>
+  </main>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+
+    function regularcourses() {
+      window.location.href = 'Regular.html';
+    }
+
+    function nextPage() {
+      window.location.href = 'Vocational.html';
+    }
+  </script>
+</body>
+</html>
